@@ -1,14 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AppState } from './types';
 import ValentineCard from './components/ValentineCard';
 import SuccessView from './components/SuccessView';
 import FloatingHearts from './components/FloatingHearts';
 
+// Helper to determine state from hash
+const getAppStateFromHash = (): AppState => {
+  const hash = window.location.hash.replace('#', '').toLowerCase();
+  return hash === 'yes' ? AppState.ACCEPTED : AppState.ASKING;
+};
+
 const App: React.FC = () => {
-  const [appState, setAppState] = useState<AppState>(AppState.ASKING);
+  // Initialize state based on current URL hash
+  const [appState, setAppState] = useState<AppState>(getAppStateFromHash);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setAppState(getAppStateFromHash());
+    };
+
+    // Listen for hash changes (back/forward button support)
+    window.addEventListener('hashchange', handleHashChange);
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
 
   const handleYes = () => {
-    setAppState(AppState.ACCEPTED);
+    // Navigate via hash updates. The event listener will update the state.
+    window.location.hash = 'yes';
   };
 
   return (
