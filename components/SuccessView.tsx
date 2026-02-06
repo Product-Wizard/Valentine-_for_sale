@@ -21,7 +21,7 @@ const SuccessView: React.FC = () => {
     <div className="relative z-10 w-full max-w-lg bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center border-4 border-red-300 animate-fade-in-up">
       <div className="mb-6 rounded-full bg-pink-100 p-4 shadow-inner">
          <img 
-          src="https://picsum.photos/id/1025/300/300" 
+          src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2piYnU4MTlnYTVpM244d2MyOHByaGtuZHp6eXJoY2M5MHBzOGJkNCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/B6Rtjz90dG97enfVbW/giphy.gif" 
           alt="Happy celebration" 
           className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-lg"
         />
