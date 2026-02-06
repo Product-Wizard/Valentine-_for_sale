@@ -59,7 +59,7 @@ const ValentineCard: React.FC<ValentineCardProps> = ({ onYes }) => {
       </div>
 
       <h1 className="text-4xl md:text-5xl font-bold text-pink-600 mb-8 text-center handwritten drop-shadow-sm">
-        Will you be my Valentine?
+        Sapphire, will you be my Valentine?
       </h1>
 
       <div className="flex flex-col md:flex-row items-center gap-6 w-full justify-center mt-4">
