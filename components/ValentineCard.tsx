@@ -52,7 +52,7 @@ const ValentineCard: React.FC<ValentineCardProps> = ({ onYes }) => {
     >
       <div className="mb-6 rounded-2xl overflow-hidden shadow-lg border-2 border-pink-100">
         <img 
-          src="https://picsum.photos/id/1062/400/300" 
+          src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bjJqeHJvOGVrcjU5dm1qbXZ1N2hhdnVneWVieHZ0eGRyNHZwMDBoYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/HJskB1NS29ZCVODTN7/giphy.gif" 
           alt="Cute puppy" 
           className="w-full h-auto object-cover"
         />
